@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "0d82d6a8-a717-460b-80f2-b6dc357389eb",
+		"name": "MNC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"User\",\n    \"last_name\": \"Number 2\",\n    \"phone_number\": \"08211823812\",\n    \"address\": \"Jl.Kenangan\",\n    \"pin\": \"112233\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1304/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1304",
+					"path": [
+						"register"
+					]
+				},
+				"description": "Register User"
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"phone_number\": \"0811255501\",\n    \"pin\": \"112233\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1304/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1304",
+					"path": [
+						"login"
+					]
+				},
+				"description": "Register User"
+			},
+			"response": []
+		},
+		{
+			"name": "Topup",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiM2M4ZGQwZmQtNDliNS00OTIxLWFhNTQtNTczYWQ5YmFlNmVjIiwiaWF0IjoxNjE4MzI2NTI3LCJleHAiOjE2MTg0MTI5Mjd9.LRKwke47uv-equOYz20n4eFLJ4NnZiqv-4qgqMzmmhQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ammount\": \"500000\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1304/topup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1304",
+					"path": [
+						"topup"
+					]
+				},
+				"description": "Register User"
+			},
+			"response": []
+		},
+		{
+			"name": "Payment",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiM2M4ZGQwZmQtNDliNS00OTIxLWFhNTQtNTczYWQ5YmFlNmVjIiwiaWF0IjoxNjE4MzI2NTI3LCJleHAiOjE2MTg0MTI5Mjd9.LRKwke47uv-equOYz20n4eFLJ4NnZiqv-4qgqMzmmhQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ammount\": \"200000\",\n    \"remarks\": \"Pulsa Telkomsel 100k\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1304/pay",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1304",
+					"path": [
+						"pay"
+					]
+				},
+				"description": "Register User"
+			},
+			"response": []
+		},
+		{
+			"name": "Transfer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiM2M4ZGQwZmQtNDliNS00OTIxLWFhNTQtNTczYWQ5YmFlNmVjIiwiaWF0IjoxNjE4MzI2NTI3LCJleHAiOjE2MTg0MTI5Mjd9.LRKwke47uv-equOYz20n4eFLJ4NnZiqv-4qgqMzmmhQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"target_user\": \"ceaa9a64-4bb5-4ce7-a4fb-09f869a37f03\",\n    \"ammount\": \"470000\",\n    \"remarks\": \"Ulang tahun\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1304/transfer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1304",
+					"path": [
+						"transfer"
+					]
+				},
+				"description": "Register User"
+			},
+			"response": []
+		},
+		{
+			"name": "Transactions History",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiM2M4ZGQwZmQtNDliNS00OTIxLWFhNTQtNTczYWQ5YmFlNmVjIiwiaWF0IjoxNjE4MzI2NTI3LCJleHAiOjE2MTg0MTI5Mjd9.LRKwke47uv-equOYz20n4eFLJ4NnZiqv-4qgqMzmmhQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:1304/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1304",
+					"path": [
+						"transactions"
+					]
+				},
+				"description": "Register User"
+			},
+			"response": []
+		},
+		{
+			"name": "Profile",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiM2M4ZGQwZmQtNDliNS00OTIxLWFhNTQtNTczYWQ5YmFlNmVjIiwiaWF0IjoxNjE4MzI2NTI3LCJleHAiOjE2MTg0MTI5Mjd9.LRKwke47uv-equOYz20n4eFLJ4NnZiqv-4qgqMzmmhQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Tom\",\n    \"last_name\": \"Araya\",\n    \"address\": \"Jl. Diponegoro No. 215\",\n    \"pin\":\"123456\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:1304/profile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "1304",
+					"path": [
+						"profile"
+					]
+				},
+				"description": "Register User"
+			},
+			"response": []
+		}
+	]
+}
